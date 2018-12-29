@@ -1,16 +1,40 @@
 var container = document.querySelector('#container');
-container.addEventListener('click', game, false);
 
 function getComputerChoice() {
-    randomNumber = Math.floor(Math.random()*3 + 1);
+    randomNumber = Math.floor(Math.random()*100 + 1);
     return randomNumber;
 }
 
-function game(e) {
+function userFn(e) {
     if(e.target !== e.currentTarget) {
-        var clickedItem = e.target.id;
-        alert("hello " + clickedItem);
+        game(Number(e.target.id.slice(3)));
+        // alert(Number(e.target.id.slice(3)));
     }
-    // e.stopPropagation();
+    // e.stopPropagation(); 
+    // https://www.kirupa.com/html5/handling_events_for_many_elements.htm
 }
 
+function game(userChoice) {
+    const computerChoice = getComputerChoice();
+    var min = 0;
+    var max = 0;
+    if (userChoice < computerChoice) {
+        min = userChoice;
+        max = computerChoice;
+    }
+    else if (userChoice > computerChoice) {
+        min = computerChoice;
+        max = userChoice;
+    }
+    else {
+        console.log("You win");
+    }
+    // console.log("this is min " + min);
+    // console.log("this is max " + max);
+}
+
+function main() {
+    container.addEventListener('click', userFn, false);
+}
+
+main();
