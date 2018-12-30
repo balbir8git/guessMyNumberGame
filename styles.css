@@ -44,7 +44,6 @@
       display: grid;
       grid-template-columns: repeat(10, 1fr);
       justify-content: center;
-
   }
 
   button {
@@ -76,7 +75,6 @@
     margin-top: 3vh;
     margin-left: 2vw;
     box-shadow: 0.15vmax 0.3vmax 0.15vmax 0.3vmax #949593
-
   }
 
   .winner {
@@ -100,8 +98,7 @@
 
   .win {
     font-weight: bolder;
-    background-color:lightgreen;
-    
+    background-color:lightgreen;   
   }
 
   .loose {
