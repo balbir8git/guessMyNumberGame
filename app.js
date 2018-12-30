@@ -1,4 +1,5 @@
-var container = document.querySelector('#container');
+const container = document.querySelector('#container');
+const guessMsg_div = document.getElementById("guessMsg"); 
 
 function getComputerChoice() {
     randomNumber = Math.floor(Math.random()*100 + 1);
@@ -25,6 +26,8 @@ function game(userChoice) {
             let offBtn = document.getElementById(temp);
             offBtn.classList.add('disabledBtnsStyle');
             offBtn.disabled = true;
+            guessMsg_div.innerHTML = `Guess higher number...`;
+            guessMsg_div.classList.add('hint');
         }
     }
     else if (userChoice > computerChoice) {
@@ -34,12 +37,16 @@ function game(userChoice) {
             let offBtn = document.getElementById(temp);
             offBtn.classList.add('disabledBtnsStyle');
             offBtn.disabled = true;
+            guessMsg_div.innerHTML = `Guess lower number...`;
+            guessMsg_div.classList.add('hint');
         }
     }
     else {
         let temp = "btn" + userChoice;
         let offBtn = document.getElementById(temp);
         offBtn.classList.add('winner');
+        guessMsg_div.innerHTML = `That's right guess. You win!`;
+        guessMsg_div.classList.add('win');
     }
     // console.log("this is min " + min);
     // console.log("this is max " + max);

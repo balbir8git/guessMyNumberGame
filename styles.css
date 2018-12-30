@@ -91,3 +91,15 @@
     margin-left: 2vw;
     box-shadow: 0.15vmax 0.3vmax 0.15vmax 0.3vmax #949593
   }
+
+  .hint {
+    font-weight: bold;
+    background-color: lightcoral;
+    display: inline;
+  }
+
+  .win {
+    font-weight: bolder;
+    background-color:lightgreen;
+    
+  }
