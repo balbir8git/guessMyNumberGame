@@ -5,6 +5,8 @@ function getComputerChoice() {
     return randomNumber;
 }
 
+const computerChoice = getComputerChoice();
+
 function userFn(e) {
     if(e.target !== e.currentTarget) {
         game(Number(e.target.id.slice(3)));
@@ -15,19 +17,29 @@ function userFn(e) {
 }
 
 function game(userChoice) {
-    const computerChoice = getComputerChoice();
-    var min = 0;
-    var max = 0;
     if (userChoice < computerChoice) {
-        min = userChoice;
-        max = computerChoice;
+        for (var i=1; i<=userChoice; i++) {
+            let temp = "btn" + i;
+            console.log(temp);
+            console.log("computer Choice is ####### " + computerChoice);
+            let offBtn = document.getElementById(temp);
+            offBtn.classList.add('disabledBtnsStyle');
+            offBtn.disabled = true;
+        }
     }
     else if (userChoice > computerChoice) {
-        min = computerChoice;
-        max = userChoice;
+        for (var i=userChoice; i<=100; i++) {
+            let temp = "btn" + i;
+            console.log(temp);
+            let offBtn = document.getElementById(temp);
+            offBtn.classList.add('disabledBtnsStyle');
+            offBtn.disabled = true;
+        }
     }
     else {
-        console.log("You win");
+        let temp = "btn" + userChoice;
+        let offBtn = document.getElementById(temp);
+        offBtn.classList.add('winner');
     }
     // console.log("this is min " + min);
     // console.log("this is max " + max);

@@ -56,16 +56,38 @@
       text-align: center;
       font-weight: bolder;
       margin-top: 3vh;
+      margin-left: 2vw;
       box-shadow: 0.15vmax 0.3vmax 0.15vmax 0.3vmax #949593
-  }
-
-  .grid-item {
-      justify-self: center;
-      margin-top: 3.5vh;
-      margin-left: 2vw
   }
 
   button:hover {
     cursor: pointer;
     background: green;
+  }
+
+  .disabledBtnsStyle {
+    height: 2.2vmax;
+    width: 2.2vmax;
+    background-color: gray;
+    color: #ffffff;
+    font-size: 1.1vmax;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    box-shadow: 0.15vmax 0.3vmax 0.15vmax 0.3vmax #949593
+
+  }
+
+  .winner {
+    height: 2.2vmax;
+    width: 2.2vmax;
+    background-color: green;
+    color: #ffffff;
+    font-size: 1.1vmax;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    box-shadow: 0.15vmax 0.3vmax 0.15vmax 0.3vmax #949593
   }
